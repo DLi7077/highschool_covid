@@ -1,0 +1,57 @@
+body{
+  text-align: left;
+}
+.part{
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 1px solid blue;
+  text-align: left;
+  padding: 10px;
+}
+
+.title{
+  font-size: 48px;
+}
+
+.subtext{
+  font-size: 24px;
+}
+
+
+.group{
+  display: inline-block;
+}
+
+.graphLayout{
+  display: inline-block;
+  max-width: 50%;
+  
+}
+
+.graph{
+  max-width:100%;
+  max-height:100%;
+  object-fit: scale-down;
+}
+
+.mediaBar{
+  align-content: center;
+  text-align: center;
+  max-width:100%;
+  max-height:100%;
+}
+
+.media{
+  display: 'flexbox';
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.feature{
+  background-color: black;
+  /* margin-left:auto; */
+  width: 40%;
+  padding-right: 10px;
+}
