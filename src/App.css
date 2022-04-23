@@ -1,36 +1,46 @@
 body{
-  text-align: left;
+  text-align: center;
 }
 .part{
-  margin-left: 10%;
-  margin-right: 10%;
   border: 1px solid blue;
-  text-align: left;
-  padding: 10px;
+  /* text-align: left; */
+  padding-bottom: 50px;
 }
 
 .title{
   font-size: 48px;
+  text-align: center;
+}
+
+.mini-title{
+  font-size: 36px;
 }
 
 .subtext{
-  font-size: 24px;
+  font-size: 32px;
+  text-align: center;
 }
 
+.textGroup{
+  padding: 5px;
+  display: inline-block;
+}
 
 .group{
   display: inline-block;
+  text-align: center;
 }
 
 .graphLayout{
   display: inline-block;
-  max-width: 50%;
-  
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
 }
 
 .graph{
-  max-width:100%;
-  max-height:100%;
+  width: 700px;
+  display: inline-flex;
   object-fit: scale-down;
 }
 
@@ -43,9 +53,9 @@ body{
 
 .media{
   display: 'flexbox';
-  width: 150px;
-  height: 50px;
-  font-size: 20px;
+  min-width: 25%;
+  min-height: 50px;
+  font-size: 150%;
   margin-left: 10px;
 }
 

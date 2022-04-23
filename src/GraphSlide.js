@@ -11,12 +11,12 @@ export default function GraphSlide({graphType, year}) {
   const [currYear, setYear]= useState(year);
 
   function decrementYear(){
-    if(currYear==2017) return;
+    if(currYear===2017) return;
     setYear(prev=> prev-1);
   }
   
   function incrementYear(cycle= toggle){
-    if(currYear==2021){
+    if(currYear===2021){
       if(!cycle) return;
       setYear(prev=> prev-4)
       return;
@@ -57,11 +57,9 @@ export default function GraphSlide({graphType, year}) {
     };
   }, [toggle,currYear]);
 
-
-
   return (
     <div className='graphLayout'>
-      <div className='title'>{graphType}</div>
+      <div className='title'>{graphType} {currYear}</div>
       {graph}
       <div className='mediaBar'>
         <button className= 'media' onClick= {()=>{decrementYear()}}>
@@ -76,15 +74,11 @@ export default function GraphSlide({graphType, year}) {
               setYear(2017);
             }
           }
-          }>
-          Pause
+        }> {`Toggle ${toggle}`}
         </button>
-
         <button className= 'media' onClick={()=>{incrementYear();}}>
-          Next Year
+          Next Year 
         </button>
-
-        <div className='title' >{currYear}</div>
       </div>
     </div>
   )
