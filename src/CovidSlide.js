@@ -14,14 +14,14 @@ export default function CovidSlide({graphType, borough}) {
       file = file+'wPrev';
     }
     updateGraph(
-      graph=> graph= <CovidType graphType={file} borough= {boro}/>
+      graph=> graph= <CovidType graphType={file}borough= {boro}/>
     )
   }
 
   function updateBorough(newBoro){
     updateBoro(
       boro=> boro= newBoro
-    )
+      )
   }
   useEffect(()=>{
     updateCovidGraph();
@@ -58,9 +58,12 @@ export default function CovidSlide({graphType, borough}) {
     toggleButton=(
       <div className='mediaBar'>
         <button className='media'
-        onClick={()=>{
-          togglePrev();
-        }}> Show / Hide Previous</button>
+        onClick={
+          ()=>{
+            togglePrev();
+          }
+        }>Show / Hide Previous</button>
+
       </div>
     )
   }
