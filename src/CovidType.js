@@ -11,7 +11,7 @@ export default function CovidType({graphType,borough='All'}) {
   }
   if(graphType==='covidCases'){
     return (
-      <img className= 'graph' src={covidCases}alt= {graphType}/>
+      <img className= 'graph' src={covidCases} width={'100%'}alt= {graphType}/>
     );
   }
   const promisedGraph= graphMapping[graphType][borough]

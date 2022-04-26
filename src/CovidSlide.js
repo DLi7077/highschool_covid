@@ -23,9 +23,6 @@ export default function CovidSlide({graphType, borough}) {
       boro=> boro= newBoro
       )
   }
-  useEffect(()=>{
-    updateCovidGraph();
-  }, [boro])
 
   const [showPrev, setToggle] = useState(false);
   const titleMapping ={
@@ -40,7 +37,8 @@ export default function CovidSlide({graphType, borough}) {
 
   useEffect(()=>{
     updateCovidGraph();
-  }, [showPrev])
+    // eslint-disable-next-line
+  }, [showPrev,boro])
 
   const boroButtons =(
     boroughs.map((borough)=>(

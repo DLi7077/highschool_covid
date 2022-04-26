@@ -4,8 +4,8 @@ let attenVSgrad= []
 let pieChart= []
 
 for (let i=2017;i<=2021;i++){
-  gradImages.push(require(`./graphs/Graduation_Rates${i}.png`));
-  attenImages.push(require(`./graphs/Attendance_Rates${i}.png`));
+  gradImages.push(require(`./graphs/graduation_rate${i}.png`));
+  attenImages.push(require(`./graphs/attendance_rate${i}.png`));
   attenVSgrad.push(require(`./graphs/AttenvGrad${i}.png`));
   pieChart.push(require(`./graphs/studentDistribution${i}.png`));
 }

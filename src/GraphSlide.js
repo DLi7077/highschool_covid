@@ -35,7 +35,10 @@ export default function GraphSlide({graphType, year}) {
       (graph)=> graph=<GraphType graphType={graphType} year ={currYear}/>
     );
   }
-  useEffect(()=>{updateYear()},[currYear]);
+  useEffect(()=>{
+    updateYear()
+  // eslint-disable-next-line
+  },[currYear]);
   
   /**
    * @description Toggle for a repeated progresion for year
@@ -55,6 +58,7 @@ export default function GraphSlide({graphType, year}) {
     return () => {
       clearInterval(interval);
     };
+  // eslint-disable-next-line
   }, [toggle,currYear]);
 
   return (
