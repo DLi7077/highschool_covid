@@ -19,7 +19,7 @@ function App() {
         <div className= "title">How to Measure Success?</div>
           <div className="subtext">
             <div className="textGroup">
-              Possible forms of Measurement:
+              <u>Possible forms of Measurement</u>:
               <ul>
                 <li>Grades/ GPA</li>
                 <li>Attendance Rate</li>
@@ -27,7 +27,7 @@ function App() {
               </ul>
               </div>
               <div className="textGroup">
-              Brief Problems:
+              <u>Complications</u>:
               <ul>
                 <li>Grades/GPA not recorded</li>
                 <li>Attendance Rates for 2020 not recorded</li>
@@ -38,26 +38,43 @@ function App() {
 
           <div className="title">Data Collection</div>
           <div className="subtext">
-            annual highschool attendance and graduation rates:
             <br></br>
-            2021: https://data.cityofnewyork.us/Education/2021-DOE-High-School-Directory/8b6c-7uty
+            <a href="https://data.cityofnewyork.us/Education/2021-DOE-High-School-Directory/8b6c-7uty" rel="noreferrer" target="_blank">
+              2021 DOE High School Directory
+            </a>
             <br></br>
-            2020: https://data.cityofnewyork.us/Education/2020-DOE-High-School-Directory/23z9-6uk9
+            <a href="https://data.cityofnewyork.us/Education/2020-DOE-High-School-Directory/23z9-6uk9" rel="noreferrer" target="_blank">
+              2020 DOE High School Directory
+            </a>
             <br></br>
-            2019: https://data.cityofnewyork.us/Education/2019-DOE-High-School-Directory/uq7m-95z8
+            <a href="https://data.cityofnewyork.us/Education/2019-DOE-High-School-Directory/uq7m-95z8" rel="noreferrer" target="_blank">
+              2019 DOE High School Directory
+            </a>
             <br></br>
-            2018: https://data.cityofnewyork.us/Education/2018-DOE-High-School-Directory/vw9i-7mzq
+            <a href="https://data.cityofnewyork.us/Education/2019-DOE-High-School-Directory/uq7m-95z8" rel="noreferrer" target="_blank">
+              2018 DOE High School Directory
+            </a>
             <br></br>
-            2017: https://data.cityofnewyork.us/Education/2017-DOE-High-School-Directory/s3k6-pzi2
+            <a href="https://data.cityofnewyork.us/Education/2017-DOE-High-School-Directory/s3k6-pzi2" rel="noreferrer" target="_blank">
+              2017 DOE High School Directory
+            </a>
             <br></br>
-            2021 remote learning data: https://infohub.nyced.org/reports/government-reports/remote-learning-attendance-data
+            <a href="https://infohub.nyced.org/reports/government-reports/remote-learning-attendance-data" rel="noreferrer" target="_blank">
+              2021 Remote Learning Data
+            </a>
             <br></br>
-            Covid Data: https://data.cityofnewyork.us/Health/COVID-19-Daily-Counts-of-Cases-Hospitalizations-an/rc75-m7u3
+            <a href="https://data.cityofnewyork.us/Health/COVID-19-Daily-Counts-of-Cases-Hospitalizations-an/rc75-m7u3" rel="noreferrer" target="_blank">
+              COVID-19 Data
+            </a>
           </div>
         <div className="group">
           
           <GraphSlide graphType={'Attendance Rates'} year= {2017}/>
           <GraphSlide graphType={'Graduation Rates'} year= {2017}/>
+          <div className="group">
+          <GraphSlide graphType={'Attendance Map'} year= {2017}/>
+          <GraphSlide graphType={'Graduation Map'} year= {2017}/>
+          </div>
           <hr></hr>
           <GraphSlide graphType={'Correlation'} year= {2017}/>
           <GraphSlide graphType={'PieChart'}    year= {2017}/>
