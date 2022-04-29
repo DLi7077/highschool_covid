@@ -30,7 +30,7 @@ export default function GraphSlide({graphType, year}) {
   const [graph,updateGraph]= useState(
     <GraphType graphType={graphType} year ={currYear}></GraphType>
   );
-  async function updateYear(){
+  function updateYear(){
     updateGraph(
       (graph)=> graph=<GraphType graphType={graphType} year ={currYear}/>
     );

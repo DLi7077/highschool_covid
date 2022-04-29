@@ -92,7 +92,7 @@ function App() {
               <CovidType graphType={'covidCases'}/>
             </div>
             <br></br>
-            <CovidSlide graphType={'covidAtt'} borough= {'Queens'}/>
+            <CovidSlide graphType={'covidAtt'} borough= {'Queens'} power ={2}/>
           </div>
         </div>
       </div>

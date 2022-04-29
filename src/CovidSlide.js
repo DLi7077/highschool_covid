@@ -2,10 +2,11 @@ import React, {useState,useEffect}from 'react'
 import CovidType from './CovidType';
 import { boroughs } from './GraphImages';
 
-export default function CovidSlide({graphType, borough}) {
+export default function CovidSlide({graphType, borough, power=1}) {
   const [boro, updateBoro] = useState(borough)
+  const [order,updateOrder] = useState(power)
   const [graph, updateGraph] = useState(
-    <CovidType graphType={graphType} borough= {boro}/>
+    <CovidType graphType={graphType} borough= {boro} power = {power}/>
   );
 
   function updateCovidGraph(){
@@ -13,15 +14,27 @@ export default function CovidSlide({graphType, borough}) {
     if(showPrev){
       file = file+'wPrev';
     }
+
     updateGraph(
-      graph=> graph= <CovidType graphType={file}borough= {boro}/>
+      graph=> graph= <CovidType graphType={file}borough= {boro} power = {order}/>
     )
   }
 
   function updateBorough(newBoro){
     updateBoro(
       boro=> boro= newBoro
-      )
+    );
+  }
+
+  function updateGraphOrder(input){
+    let nextOrder =input;
+    if(input<1 || input>7){
+      if(input===0) nextOrder= 7;
+      else nextOrder=1;
+    }
+    updateOrder(
+      prevOrder => prevOrder = nextOrder
+    );
   }
 
   const [showPrev, setToggle] = useState(false);
@@ -38,7 +51,28 @@ export default function CovidSlide({graphType, borough}) {
   useEffect(()=>{
     updateCovidGraph();
     // eslint-disable-next-line
-  }, [showPrev,boro])
+  }, [showPrev,boro,order])
+
+  const orderButtons=(
+    <div className='mediaBar'>
+      <button className='media'
+        fontSize={'12px'}
+        key= {'decrement'}
+        onClick={
+          ()=>{updateGraphOrder(order-1)}
+        }>
+        order--;
+      </button>
+      <button className='media'
+        fontSize={'12px'}
+        onClick={
+          ()=>{updateGraphOrder(order+1)}
+        }
+        key= {'increment'}>
+        order++;
+      </button>
+    </div>
+  )
 
   const boroButtons =(
     boroughs.map((borough)=>(
@@ -51,7 +85,7 @@ export default function CovidSlide({graphType, borough}) {
   )
 
   let toggleButton =(<></>)
-
+  
   if(graphType!=='covidCases'){
     toggleButton=(
       <div className='mediaBar'>
@@ -65,10 +99,9 @@ export default function CovidSlide({graphType, borough}) {
       </div>
     )
   }
-
-
   return (
     <div className='graphLayout'>
+      {orderButtons}
       <div className='title'>{titleMapping[graphType]}</div>
       {graph}
       <div className='mediaBar'>

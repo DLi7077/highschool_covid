@@ -5,6 +5,7 @@ let attenMaps =[]
 let attenVSgrad= []
 let pieChart= []
 
+
 for (let i=2017;i<=2021;i++){
   gradImages.push(require(`./graphs/graduation_rate${i}.png`));
   attenImages.push(require(`./graphs/attendance_rate${i}.png`));
@@ -26,13 +27,30 @@ let boroughs= [
 ]
 
 let covidCases= require(`./graphs/CovidCasesDaily.png`)
-let covidAtt= {}
-let covidAttwPrev ={}
+let covidAtt= {
+  'All':[],
+  'Bronx':[],
+  'Brooklyn':[],
+  'Staten Island':[],
+  'Manhattan':[],
+  'Queens':[]
+}
+let covidAttwPrev ={
+  'All':[],
+  'Bronx':[],
+  'Brooklyn':[],
+  'Staten Island':[],
+  'Manhattan':[],
+  'Queens':[]
+}
 
 boroughs.forEach(b=>{
-  covidAtt[b]=(require(`./graphs/covidAttendance${b}.png`))
-  covidAttwPrev[b]=(require(`./graphs/covidAttendance${b}withPrev.png`))
+  for (let order=1;order<=8;order++){
+    covidAtt[b].push(require(`./graphs/poly/covidAttendance${b}order${order}.png`))
+    covidAttwPrev[b].push(require(`./graphs/poly/covidAttendance${b}withPrevorder${order}.png`))
+  }
 })
+
 console.table(covidAtt)
 
 export {
