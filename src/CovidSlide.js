@@ -2,7 +2,7 @@ import React, {useState,useEffect}from 'react'
 import CovidType from './CovidType';
 import { boroughs } from './GraphImages';
 
-export default function CovidSlide({graphType, borough, power=1}) {
+export default function CovidSlide({graphType, borough, power=1 ,orders= false, prev= false}) {
   const [boro, updateBoro] = useState(borough)
   const [order,updateOrder] = useState(power)
   const [graph, updateGraph] = useState(
@@ -14,7 +14,6 @@ export default function CovidSlide({graphType, borough, power=1}) {
     if(showPrev){
       file = file+'wPrev';
     }
-
     updateGraph(
       graph=> graph= <CovidType graphType={file}borough= {boro} power = {order}/>
     )
@@ -53,26 +52,29 @@ export default function CovidSlide({graphType, borough, power=1}) {
     // eslint-disable-next-line
   }, [showPrev,boro,order])
 
-  const orderButtons=(
-    <div className='mediaBar'>
-      <button className='media'
-        fontSize={'12px'}
-        key= {'decrement'}
-        onClick={
-          ()=>{updateGraphOrder(order-1)}
-        }>
-        order--;
-      </button>
-      <button className='media'
-        fontSize={'12px'}
-        onClick={
-          ()=>{updateGraphOrder(order+1)}
-        }
-        key= {'increment'}>
-        order++;
-      </button>
-    </div>
-  )
+  let orderButtons = <></>
+  if(orders){
+    orderButtons=(
+      <div className='mediaBar'>
+        <button className='media'
+          fontSize={'12px'}
+          key= {'decrement'}
+          onClick={
+            ()=>{updateGraphOrder(order-1)}
+          }>
+          order--;
+        </button>
+        <button className='media'
+          fontSize={'12px'}
+          onClick={
+            ()=>{updateGraphOrder(order+1)}
+          }
+          key= {'increment'}>
+          order++;
+        </button>
+      </div>
+    )
+  }
 
   const boroButtons =(
     boroughs.map((borough)=>(
@@ -86,7 +88,7 @@ export default function CovidSlide({graphType, borough, power=1}) {
 
   let toggleButton =(<></>)
   
-  if(graphType!=='covidCases'){
+  if(graphType!=='covidCases' && prev){
     toggleButton=(
       <div className='mediaBar'>
         <button className='media'

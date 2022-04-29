@@ -51,7 +51,28 @@ boroughs.forEach(b=>{
   }
 })
 
-console.table(covidAtt)
+let extrapolate = {
+  'All':[],
+  'Bronx':[],
+  'Brooklyn':[],
+  'Staten Island':[],
+  'Manhattan':[],
+  'Queens':[]
+}
+let extrapolatewPrev = {
+  'All':[],
+  'Bronx':[],
+  'Brooklyn':[],
+  'Staten Island':[],
+  'Manhattan':[],
+  'Queens':[]
+}
+
+boroughs.forEach(b=>{
+  extrapolate[b].push(require(`./graphs/poly/extrapolate/${b}order1.png`))
+  extrapolatewPrev[b].push(require(`./graphs/poly/extrapolate/${b}wPrevorder1.png`))
+})
+console.table(extrapolatewPrev)
 
 export {
   gradImages,
@@ -64,4 +85,6 @@ export {
   covidAtt,
   covidAttwPrev,
   boroughs,
+  extrapolate,
+  extrapolatewPrev
 };

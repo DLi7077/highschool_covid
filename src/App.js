@@ -92,13 +92,21 @@ function App() {
               <CovidType graphType={'covidCases'}/>
             </div>
             <br></br>
-            <CovidSlide graphType={'covidAtt'} borough= {'Queens'} power ={2}/>
+            <CovidSlide graphType={'covidAtt'} borough= {'Queens'}
+            orders= {true} power ={2} prev= {true}/>
           </div>
         </div>
       </div>
 
       <div className= 'part'>
         <div className= "title">Extrapolation</div>
+          <div className="subtext">
+            <div className="group">
+              <div className='graphLayout'>
+                <CovidSlide graphType={'extrapolate'} prev ={true}/>
+              </div>
+            </div>
+          </div>
       </div>
 
     </div>

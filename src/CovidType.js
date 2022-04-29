@@ -2,12 +2,16 @@ import React from 'react'
 import {
   covidCases,
   covidAtt,
-  covidAttwPrev
+  covidAttwPrev,
+  extrapolate,
+  extrapolatewPrev
 } from './GraphImages'
 export default function CovidType({graphType,borough='All',power=1}) {
   let graphMapping= {
     'covidAtt': covidAtt,
-    'covidAttwPrev':covidAttwPrev
+    'covidAttwPrev':covidAttwPrev,
+    'extrapolate': extrapolate,
+    'extrapolatewPrev': extrapolatewPrev
   }
   
   if(graphType==='covidCases'){
