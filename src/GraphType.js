@@ -5,7 +5,8 @@ import {
   gradMaps,
   attenMaps,
   attenVSgrad,
-  pieChart
+  pieChart,
+  attendanceTimeline
 } from './GraphImages'
 
 export default function GraphType({graphType,year}) {
@@ -15,7 +16,13 @@ export default function GraphType({graphType,year}) {
     'Attendance Rates': attenImages,
     'Attendance Map': attenMaps,
     'Correlation': attenVSgrad,
-    'PieChart': pieChart
+    'PieChart': pieChart,
+    'Attendance Timeline': attendanceTimeline
+  }
+  if(graphType==='Attendance Timeline'){
+    return(
+      <img className= 'graph' src= {attendanceTimeline} alt={`attendanceTimeline`}></img>
+    )
   }
   const images= graphMapping[graphType];
 

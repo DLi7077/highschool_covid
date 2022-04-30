@@ -5,7 +5,6 @@ let attenMaps =[]
 let attenVSgrad= []
 let pieChart= []
 
-
 for (let i=2017;i<=2021;i++){
   gradImages.push(require(`./graphs/graduation_rate${i}.png`));
   attenImages.push(require(`./graphs/attendance_rate${i}.png`));
@@ -25,7 +24,7 @@ let boroughs= [
   'Manhattan',
   'Queens'
 ]
-
+let attendanceTimeline = require('./graphs/AttendanceTimeline.png')
 let covidCases= require(`./graphs/CovidCasesDaily.png`)
 let covidAtt= {
   'All':[],
@@ -81,6 +80,7 @@ export {
   attenMaps,
   attenVSgrad,
   pieChart,
+  attendanceTimeline,
   covidCases,
   covidAtt,
   covidAttwPrev,

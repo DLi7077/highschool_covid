@@ -57,19 +57,16 @@ export default function CovidSlide({graphType, borough, power=1 ,orders= false, 
     orderButtons=(
       <div className='mediaBar'>
         <button className='media'
-          fontSize={'12px'}
-          key= {'decrement'}
-          onClick={
+          fontSize={'12px'} key= {'decrement'} onClick={
             ()=>{updateGraphOrder(order-1)}
           }>
           order--;
         </button>
+
         <button className='media'
-          fontSize={'12px'}
-          onClick={
+          fontSize={'12px'} key= {'increment'} onClick={
             ()=>{updateGraphOrder(order+1)}
-          }
-          key= {'increment'}>
+          }>
           order++;
         </button>
       </div>
@@ -91,8 +88,7 @@ export default function CovidSlide({graphType, borough, power=1 ,orders= false, 
   if(graphType!=='covidCases' && prev){
     toggleButton=(
       <div className='mediaBar'>
-        <button className='media'
-        onClick={
+        <button className='media' onClick={
           ()=>{
             togglePrev();
           }
