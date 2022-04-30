@@ -52,6 +52,8 @@ function App() {
               NYC Borough Boundaries.geojson
             </a>
           </div>
+      </div>
+      <div className="part">
         <div className= "title">How to Measure Success?</div>
           <div className="subtext">
             We need a metric for success. Although grades are a good idea,
