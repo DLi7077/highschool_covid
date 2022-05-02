@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/highschool_covid/static/css/main.a5700eb1.css",
-    "main.js": "/highschool_covid/static/js/main.2e453a0f.js",
+    "main.css": "/highschool_covid/static/css/main.2058b1dd.css",
+    "main.js": "/highschool_covid/static/js/main.020a9dac.js",
     "static/media/graduationMap2019.png": "/highschool_covid/static/media/graduationMap2019.4f13aaf0712e73561bb8.png",
     "static/media/AttenvGrad2017.png": "/highschool_covid/static/media/AttenvGrad2017.b137cef2e3456becf893.png",
     "static/media/graduationMap2017.png": "/highschool_covid/static/media/graduationMap2017.b16fe04dc0ff325f333d.png",
@@ -18,6 +18,7 @@
     "static/media/AttenvGrad2018.png": "/highschool_covid/static/media/AttenvGrad2018.dffdc63295f1d741dc72.png",
     "static/media/AttenvGrad2021.png": "/highschool_covid/static/media/AttenvGrad2021.01d8d29dabe4fe2da322.png",
     "static/media/AttenvGrad2019.png": "/highschool_covid/static/media/AttenvGrad2019.6dc1d95454a90b22f634.png",
+    "static/media/Devinpfp.png": "/highschool_covid/static/media/Devinpfp.af2d309a69539a18bbe5.png",
     "static/media/AllwPrevorder1.png": "/highschool_covid/static/media/AllwPrevorder1.0c6c8f54ae12cccb6141.png",
     "static/media/Allorder1.png": "/highschool_covid/static/media/Allorder1.8d7fd2c00d7010762822.png",
     "static/media/AttendanceTimeline.png": "/highschool_covid/static/media/AttendanceTimeline.7363a0a33f06ca4f4a1f.png",
@@ -142,12 +143,13 @@
     "static/media/studentDistribution2021.png": "/highschool_covid/static/media/studentDistribution2021.23b7a01f02b5cc823bc4.png",
     "static/media/studentDistribution2018.png": "/highschool_covid/static/media/studentDistribution2018.4e7c68ed60cb83674312.png",
     "static/media/studentDistribution2017.png": "/highschool_covid/static/media/studentDistribution2017.5210a78f773c57bb7939.png",
+    "static/media/KevinGithubpfp.png": "/highschool_covid/static/media/KevinGithubpfp.61c1a7d198d845791a1f.png",
     "index.html": "/highschool_covid/index.html",
-    "main.a5700eb1.css.map": "/highschool_covid/static/css/main.a5700eb1.css.map",
-    "main.2e453a0f.js.map": "/highschool_covid/static/js/main.2e453a0f.js.map"
+    "main.2058b1dd.css.map": "/highschool_covid/static/css/main.2058b1dd.css.map",
+    "main.020a9dac.js.map": "/highschool_covid/static/js/main.020a9dac.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5700eb1.css",
-    "static/js/main.2e453a0f.js"
+    "static/css/main.2058b1dd.css",
+    "static/js/main.020a9dac.js"
   ]
 }
