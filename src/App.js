@@ -5,6 +5,8 @@ import CovidType from "./CovidType";
 import GraphType from "./GraphType";
 import GraphSlide from "./GraphSlide";
 import SchoolDataSlide from "./SchoolDataSlide";
+import {Kevinpfp,Devinpfp} from './miscellaneous';
+import { Avatar } from "@material-ui/core";
 
 function App() {
   
@@ -12,8 +14,10 @@ function App() {
     <div className= 'body'>
       <div className= 'part'>
         <div className= "title">An Attempt to Measure COVID-19's Effect on Highschool Education</div>
-        <div className= "subtext">
-          This project seeks to determine Covid-19's affect on highschool education.
+        -Devin
+        <div className= "subtext"
+        style ={{textAlign: 'center'}}>
+          This project seeks to somewhat measure COVID-19's affect on highschool education.
         </div>
       </div>
 
@@ -59,13 +63,13 @@ function App() {
           <div className="subtext">
             We need a metric for success. Although grades are a good idea,
             the Department of Education does not have grades publicly available, and neither are GPAs.
-            <br></br>
+            <br></br><br></br>
             Another way to measure are graduation rates, as graduating school is pretty much the main achievement.
             However, graduation rates are recorded yearly, and having only 5 points of data isn't very helpful.
-            We do have attendance rates, which are recorded daily, except for a large chunk of 2020 when covid started.
-            <br></br>
+            We do have attendance rates, which are recorded daily... except for a large chunk of 2020 when covid started.
+            <br></br><br></br>
             Before we proceed with using attendance rates as a measurement for success, we must first confirm its relationship with Graduation Rates.
-            <br></br>
+            <br></br><br></br>
             The following graphs/maps provide an insight of how attendance and graduation are related.
           </div>
         <div className="group">
@@ -141,8 +145,11 @@ function App() {
         textAlign:'left'
       }}
       >
-        <div className="title">Some Statistics (see how your highschool did the past few years)</div>
+        <div className="title"
+        style={{backgroundColor:'rgb(184, 143, 143)'}}
+        >Some Statistics (see how your highschool did the past few years)</div>
         <div className="group">
+          <br></br>
           <SchoolDataSlide/>
         </div>
       </div>
@@ -227,9 +234,6 @@ function App() {
             where each faded dot is the average attendance rate of a high school during the sampled 4 days.
           </div>
           <div className="group">
-            <div className="subtext">
-              
-            </div>
               <CovidSlide graphType={'extrapolate'} prev ={true}/>
           </div>
 
@@ -253,7 +257,6 @@ function App() {
             <li>Classes are becoming easier to pass</li>
             <li>Online courses are teaching better</li>
             <li>Access to online material are helping students pass</li>
-            <li>Zoom calls are giving students 5G cancer, turning them into metahumans</li>
 
           </ul>
         </div>
@@ -268,16 +271,34 @@ function App() {
             <li>Graduation Rates does not 100% correspond to good education</li>
             <li>A lot of attendance months were not recorded</li>
             <li>Some schools did not report their attendance and graduation rates, and had to be dropped</li>
-            <li>It was right when I was writing this that I realized I don't have any basic statistics to share</li>
+            <li>It was when I was writing this that I realized I didn't have any basic statistics to share</li>
             <li>A lot of csv files had confusing layouts, and organizing the data was a hell of a task</li>
             <li>The python code could've been halved if I actually planned this out</li>
             <li>Python syntax gives me anxiety</li>
             <li>I've never used the React framework</li>
+            <li>`border: 1px solid red` is the equivalent to printing before and after every function call</li>
             <li>Data Structures & Algorithms pale in comparison to CSS</li>
             <li>Many thanks to Kevin C. for helping me style the page.</li>
-
           </ul>
+          <div className="group"
+          style={{backgroundColor:'black'}}>
+            <div className="half">
+              <a href="https://github.com/DLi7077" rel="noreferrer" target="_blank">
+                <Avatar src={Devinpfp}
+                style= {{width:'200px', height: '200px'}}
+                /> Devin L.
+              </a>
+            </div>
+            <div className="half">
+            <a href="https://github.com/Chen1571" rel="noreferrer" target="_blank">
+              <Avatar src={Kevinpfp}
+              style= {{width:'200px', height: '200px'}}
+              />
+              Kevin C.
+            </a></div>
+          </div>
         </div>
+
       </div>
 
     </div>

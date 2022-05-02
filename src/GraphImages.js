@@ -71,7 +71,6 @@ boroughs.forEach(b=>{
   extrapolate[b].push(require(`./graphs/poly/extrapolate/${b}order1.png`))
   extrapolatewPrev[b].push(require(`./graphs/poly/extrapolate/${b}wPrevorder1.png`))
 })
-console.table(extrapolatewPrev)
 
 export {
   gradImages,

@@ -40,7 +40,8 @@ export default function CovidSlide({graphType, borough, power=1 ,orders= false, 
   const titleMapping ={
     'covidAtt':'Covid vs Attendance Rates (by Month)',
     'covidCases': 'Historical Covid Cases',
-    'covidAttwPrev': 'Covid vs Attendance Rates (with previous rates)'
+    'covidAttwPrev': 'Covid vs Attendance Rates (with previous rates)',
+    'extrapolate': 'Recent Data on Built model'
   }
 
   function togglePrev(){

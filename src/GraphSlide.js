@@ -1,6 +1,10 @@
 
 import React, {useState, useEffect} from 'react'
 import GraphType from './GraphType'
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import PauseIcon from '@material-ui/icons/Pause';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 // import GraphImages from './graphs/GraphImages.js'
 
 export default function GraphSlide({graphType, year}) {
@@ -48,6 +52,10 @@ export default function GraphSlide({graphType, year}) {
   async function toggleCycle(){
     setToggle(prev=> !prev);
   }
+  const playPause = curr=>{
+    if(curr) return <PlayArrowIcon style= {{transform: 'scale(2)'}}/>
+    return <PauseIcon style= {{transform: 'scale(2)'}}/>
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -67,21 +75,20 @@ export default function GraphSlide({graphType, year}) {
       {graph}
       <div className='mediaBar'>
         <button className= 'media' onClick= {()=>{decrementYear()}}>
-          Previous Year
+          <ArrowBackIcon style= {{transform: 'scale(2)'}}/>
         </button>
 
         <button className= 'media' onClick= {
           ()=>{
             toggleCycle();
-            console.log(`toggled ${toggle}`);
             if(!toggle){
               setYear(2017);
             }
           }
-        }> {`Toggle ${toggle}`}
+        }> {playPause(toggle)}
         </button>
         <button className= 'media' onClick={()=>{incrementYear();}}>
-          Next Year 
+          <ArrowForwardIcon style= {{transform: 'scale(2)'}}/>
         </button>
       </div>
     </div>

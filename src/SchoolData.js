@@ -6,9 +6,9 @@ let schoolData= {
 const boroughColorMap ={
   'Brooklyn': 'orange',
   'Queens':'red',
-  'Staten Island': 'purple',
-  'Manhattan': 'green',
-  'Bronx' : 'blue'
+  'Staten Island': 'magenta',
+  'Manhattan': 'lightgreen',
+  'Bronx' : 'skyblue'
 }
 
 let schoolYears= [2017,2018,2019,2020,2021];
@@ -66,11 +66,8 @@ for (let year= 2017;year<=2021;year+=1){
   annualGraduation[year]['All']= graduationSum/5;
 }
 
-console.table(annualAttendance)
-console.table(annualGraduation)
 
 function querySchool(schoolQuery, dataSet){
-  console.log(schoolQuery)
   for (let i=0;i<dataSet.length;i++){
     const data= dataSet[i];
     if(data['school_name']===schoolQuery){
