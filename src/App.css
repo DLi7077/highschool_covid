@@ -13,6 +13,9 @@ a{
 a:hover {
   color: darkblue
 }
+a:active{
+  color: rgb(0, 0, 0)
+}
 button {
   background-color: rgb(116, 162, 219);
   color: white;
@@ -37,6 +40,7 @@ button:hover {
   padding: 20px;
   font-size: 48px;
   text-align: center;
+  border: 1px solid red;
 }
 
 .mini-title{
@@ -60,8 +64,9 @@ button:hover {
 }
 
 .group{
-  max-width:auto;
+  width:100%;
   display: inline-block;
+  border: 1px solid red;
 }
 
 .graphLayout{
@@ -72,7 +77,7 @@ button:hover {
 }
 
 .graph{
-  width:600px;
+  max-width:600px;
   display: inline-flex;
   object-fit: scale-down;
 }
@@ -85,16 +90,40 @@ button:hover {
 }
 
 .media{
-  display: 'flexbox';
-  min-width: 25%;
+  display: 'flex';
+  width: auto;
+  max-width: 30%;
   min-height: 50px;
   font-size: 150%;
   margin-left: 10px;
 }
 
-.feature{
-  background-color: black;
-  /* margin-left:auto; */
-  width: 40%;
-  padding-right: 10px;
+.mini-title{
+  font-size: 35px;
+}
+
+.schoolSearch{
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+
+.schoolDetails{
+  display: inline-block;
+  position:relative;
+  top:0%;
+  padding-left: 2%;
+  min-width: 26;
+  max-width:50%;
+  font-size: 30px;
+  text-align: left;
+}
+.statDetails{
+  display: inline-block;
+  position:relative;
+  top:0%;
+  padding-left: 2%;
+  min-width: 20%;
+  font-size: 30px;
+  text-align: left;
 }

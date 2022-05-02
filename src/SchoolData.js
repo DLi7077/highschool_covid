@@ -1,24 +1,83 @@
-const { default: matchers } = require('@testing-library/jest-dom/matchers');
+import _ from 'lodash'
 
 let schoolData= {
 };
 
-for (let year= 2017;year<=2021;year+=1){
-  const data = require('./jsonData/2017.json')['data'];
-  schoolData[year]= data;
-  schoolData[year]['schoolNames']= data.map(schools=>{
-    return schools['school_name'];
-  })
+const boroughColorMap ={
+  'Brooklyn': 'orange',
+  'Queens':'red',
+  'Staten Island': 'purple',
+  'Manhattan': 'green',
+  'Bronx' : 'blue'
 }
 
+let schoolYears= [2017,2018,2019,2020,2021];
+let annualAttendance ={
+  2017:{},
+  2018:{},
+  2019:{},
+  2020:{},
+  2021:{}
+}
+let annualGraduation ={
+  2017:{},
+  2018:{},
+  2019:{},
+  2020:{},
+  2021:{}
+}
+let borough=['Brooklyn','Queens','Staten Island','Manhattan','Bronx']
+
+for (let year= 2017;year<=2021;year+=1){
+  const data = require(`./jsonData/${year}.json`)['data'];
+  schoolData[year]= data;
+
+  let boroughAtt = {
+    'Brooklyn':[],
+    'Queens':[],
+    'Staten Island':[],
+    'Manhattan':[],
+    'Bronx':[]
+  }
+  let boroughGrad={
+    'Brooklyn':[],
+    'Queens':[],
+    'Staten Island':[],
+    'Manhattan':[],
+    'Bronx':[]
+  }
+  
+  data.forEach(entry=>{
+    const entryBorough = entry['Borough'];
+    boroughAtt[entryBorough].push(entry['attendance_rate']);
+    boroughGrad[entryBorough].push(entry['graduation_rate'])
+  })
+  
+  let attendanceSum=0;
+  let graduationSum=0;
+  borough.forEach(b=>{
+    annualAttendance[year][b]=_.reduce(boroughAtt[b],(sum,next)=> sum+ next,0)/boroughAtt[b].length
+    attendanceSum+= annualAttendance[year][b];
+
+    annualGraduation[year][b]=_.reduce(boroughGrad[b],(sum,next)=> sum+ next,0)/boroughGrad[b].length
+    graduationSum+= annualGraduation[year][b];
+  })
+  annualAttendance[year]['All']= attendanceSum/5;
+  annualGraduation[year]['All']= graduationSum/5;
+}
+
+console.table(annualAttendance)
+console.table(annualGraduation)
+
 function querySchool(schoolQuery, dataSet){
+  console.log(schoolQuery)
   for (let i=0;i<dataSet.length;i++){
-    const schoolData= dataSet[i];
-    if(schoolData['school_name']==schoolQuery){
-      return schoolData;// found school data
+    const data= dataSet[i];
+    if(data['school_name']===schoolQuery){
+      return data;// found school data
     }
   }
-  throw new Error(`School ${schoolQuery} not Found`);
+  return "no school"
 }
 
 function suggestName(schoolName, dataSet){
@@ -30,20 +89,24 @@ function suggestName(schoolName, dataSet){
     }
     if(idx> 2) matches[name]=idx;
   });
-
   // sort by matches
-  sortedMatches= Object.entries(matches).sort((a,b)=>{
+  let sortedMatches= Object.entries(matches).sort((a,b)=>{
     return b[1]-a[1];
   });
-  
   // strip off match count
-  sortedMatches = sortedMatches.map(match=>{
+  const topMatches = sortedMatches.map(match=>{
     return match[0];
   })
 
-  return sortedMatches.slice(0,5);
+  return topMatches.slice(0,5);
 }
 
-sName= suggestName('Bronx',schoolData[2017])[s0]; // 'Staten Island Technical High School'
-console.log(sName)
-console.log(querySchool(sName,schoolData[2017]))
+export {
+  annualAttendance,
+  annualGraduation,
+  boroughColorMap,
+  schoolData,
+  schoolYears,
+  querySchool,
+  suggestName
+}

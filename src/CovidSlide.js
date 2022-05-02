@@ -5,7 +5,7 @@ import { boroughs } from './GraphImages';
 export default function CovidSlide({graphType, borough, power=1 ,orders= false, prev= false}) {
   const [boro, updateBoro] = useState(borough)
   const [order,updateOrder] = useState(power)
-  const [graph, updateGraph] = useState(
+  const [graph,updateGraph] = useState(
     <CovidType graphType={graphType} borough= {boro} power = {power}/>
   );
 

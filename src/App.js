@@ -4,6 +4,7 @@ import CovidSlide from "./CovidSlide";
 import CovidType from "./CovidType";
 import GraphType from "./GraphType";
 import GraphSlide from "./GraphSlide";
+import SchoolDataSlide from "./SchoolDataSlide";
 
 function App() {
   
@@ -135,6 +136,16 @@ function App() {
         </div>
       </div>
 
+      <div className="part"
+      style={{
+        textAlign:'left'
+      }}
+      >
+        <div className="title">Some Statistics</div>
+        <div className="group">
+          <SchoolDataSlide/>
+        </div>
+      </div>
       <div className= 'part'>
         <div className= "title">Covid's Effect</div>
         <div className="subtext">
@@ -243,6 +254,26 @@ function App() {
             <li>Online courses are teaching better</li>
             <li>Access to online material are helping students pass</li>
             <li>Zoom calls are giving students 5G cancer, turning them into metahumans</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div className='part'>
+        <div className="title">Author's Notes</div>
+        <div className="subtext">
+          Below are the listed troubles I had while building this project
+          <br></br>
+          <ul>
+            <li>Graduation Rates does not 100% correspond to good education</li>
+            <li>A lot of attendance months were not recorded</li>
+            <li>Some schools did not report their attendance and graduation rates, and had to be dropped</li>
+            <li>It was right when I was writing this that I realized I don't have any basic statistics to share</li>
+            <li>A lot of csv files had confusing layouts, and organizing the data was a hell of a task</li>
+            <li>The python code could've been halved if I actually planned this out</li>
+            <li>Python syntax gives me anxiety</li>
+            <li>I've never used the React framework</li>
+            <li>Data Structures & Algorithms pale in comparison to designing a webpage</li>
 
           </ul>
         </div>
