@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/highschool_covid/static/css/main.ea22c54b.css",
-    "main.js": "/highschool_covid/static/js/main.c7c3baaf.js",
+    "main.css": "/highschool_covid/static/css/main.a5700eb1.css",
+    "main.js": "/highschool_covid/static/js/main.2e453a0f.js",
     "static/media/graduationMap2019.png": "/highschool_covid/static/media/graduationMap2019.4f13aaf0712e73561bb8.png",
     "static/media/AttenvGrad2017.png": "/highschool_covid/static/media/AttenvGrad2017.b137cef2e3456becf893.png",
     "static/media/graduationMap2017.png": "/highschool_covid/static/media/graduationMap2017.b16fe04dc0ff325f333d.png",
@@ -143,11 +143,11 @@
     "static/media/studentDistribution2018.png": "/highschool_covid/static/media/studentDistribution2018.4e7c68ed60cb83674312.png",
     "static/media/studentDistribution2017.png": "/highschool_covid/static/media/studentDistribution2017.5210a78f773c57bb7939.png",
     "index.html": "/highschool_covid/index.html",
-    "main.ea22c54b.css.map": "/highschool_covid/static/css/main.ea22c54b.css.map",
-    "main.c7c3baaf.js.map": "/highschool_covid/static/js/main.c7c3baaf.js.map"
+    "main.a5700eb1.css.map": "/highschool_covid/static/css/main.a5700eb1.css.map",
+    "main.2e453a0f.js.map": "/highschool_covid/static/js/main.2e453a0f.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea22c54b.css",
-    "static/js/main.c7c3baaf.js"
+    "static/css/main.a5700eb1.css",
+    "static/js/main.2e453a0f.js"
   ]
 }
