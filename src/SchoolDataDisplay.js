@@ -51,7 +51,7 @@ export default function SchoolDataDisplay({school, schoolYear}) {
         <br></br>
       </div>
       <div className='statDetails'>
-        <div className='mini-title'>{`Borough Average:`}</div>
+        <div className='mini-title'>{`${borough} Average:`}</div>
         <br></br>
         <br></br>
         {`Attendance rate: ${round(annualBoroAtt,4).toFixed(2)}%`}

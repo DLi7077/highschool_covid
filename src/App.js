@@ -141,7 +141,7 @@ function App() {
         textAlign:'left'
       }}
       >
-        <div className="title">Some Statistics</div>
+        <div className="title">Some Statistics (see how your highschool did the past few years)</div>
         <div className="group">
           <SchoolDataSlide/>
         </div>
@@ -273,7 +273,8 @@ function App() {
             <li>The python code could've been halved if I actually planned this out</li>
             <li>Python syntax gives me anxiety</li>
             <li>I've never used the React framework</li>
-            <li>Data Structures & Algorithms pale in comparison to designing a webpage</li>
+            <li>Data Structures & Algorithms pale in comparison to CSS</li>
+            <li>Many thanks to Kevin C. for helping me style the page.</li>
 
           </ul>
         </div>
