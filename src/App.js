@@ -280,23 +280,19 @@ function App() {
             <li>Data Structures & Algorithms pale in comparison to CSS</li>
             <li>Many thanks to Kevin C. for helping me style the page.</li>
           </ul>
-          <div className="group"
-          style={{backgroundColor:'black'}}>
-            <div className="half">
+          <div className="half" style={{width:'auto'}}>
+            <div style= {{display: 'flex', backgroundColor:'black'}}>
               <a href="https://github.com/DLi7077" rel="noreferrer" target="_blank">
-                <Avatar src={Devinpfp}
-                style= {{width:'200px', height: '200px'}}
-                /> Devin L.
+                <Avatar src={Devinpfp} style= {{width:'200px', height: '200px'}} /> Devin L.
+              </a>
+              <a href="https://github.com/Chen1571" rel="noreferrer" target="_blank">
+                <Avatar src={Kevinpfp} style= {{width:'200px', height: '200px'}}/>
+                Kevin C.
               </a>
             </div>
-            <div className="half">
-            <a href="https://github.com/Chen1571" rel="noreferrer" target="_blank">
-              <Avatar src={Kevinpfp}
-              style= {{width:'200px', height: '200px'}}
-              />
-              Kevin C.
-            </a></div>
+
           </div>
+          
         </div>
 
       </div>
