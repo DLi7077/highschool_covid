@@ -1,12 +1,12 @@
-# Getting Started with Create React App
+# My first react project to display my attempts of measuring Covid-19's effect on Highschool Attendance/Graduation Rates
+- webpage: https://dli7077.github.io/highschool_covid/
+- code for generating graphs: https://github.com/DLi7077/Covid-effect-on-HS
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Make sure you're using Node v12.22.4
 
-## My first react project to display my attempts of measuring Covid-19's effect on Highschool Attendance/Graduation Rates
-- webpage: https://dli7077.github.io/highschool_covid/
-- code for generating graphs: https://github.com/DLi7077/Covid-effect-on-HS
+
 
 
 
