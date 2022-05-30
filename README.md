@@ -4,7 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Make sure you're using Node v12.22.4
 
-## Available Scripts
+## My first react project to display my attempts of measuring Covid-19's effect on Highschool Attendance/Graduation Rates
+
+
+
+<details>
+  <summary> Available Scripts </summary>
 
 In the project directory, you can run:
 
@@ -70,3 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
+  </details>
